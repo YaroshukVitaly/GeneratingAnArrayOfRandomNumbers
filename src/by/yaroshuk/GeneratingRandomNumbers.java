@@ -8,12 +8,14 @@ import java.util.Random;
 public class GeneratingRandomNumbers {
 
     public static void main(String[] args) {
-        int[] array = generateRandomIntArray(24, 100);
-        int min = findMinimum(array);
+        for (int i = 0; i < 100; i++) {
+            int[] array = generateRandomIntArray(24, 100);
+            int min = findMinimum(array);
 
-        System.out.println(Arrays.toString(array));
-        System.out.println("min = " + min);
-
+            System.out.println(Arrays.toString(array));
+            System.out.println("min = " + min);
+            System.out.println();
+        }
 
     }
 

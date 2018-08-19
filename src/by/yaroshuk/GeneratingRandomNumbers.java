@@ -9,7 +9,10 @@ public class GeneratingRandomNumbers {
 
     public static void main(String[] args) {
         int[] array = generateRandomIntArray(24, 100);
+        int min = findMinimum(array);
+
         System.out.println(Arrays.toString(array));
+        System.out.println("min = " + min);
 
 
     }
@@ -21,5 +24,14 @@ public class GeneratingRandomNumbers {
             array [i] = random.nextInt(upperBound);
         }
         return array;
+    }
+    private static int findMinimum(int[] array){
+        int min = array[0];
+        for (int i = 1; i < array.length; i++) {
+            if (min > array[i]){
+                min = array[i];
+            }
+        }
+        return min;
     }
 }
